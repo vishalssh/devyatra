@@ -3,10 +3,9 @@ package com.example.hotelmanagerservice.controller;
 import com.example.hotelmanagerservice.model.Hotelmanager;
 import com.example.hotelmanagerservice.service.HotelManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/hotelmanager")
@@ -20,4 +19,8 @@ public class HotelManagerController {
     }
 
 
+    @GetMapping("/getallmanagers")
+    public List<Hotelmanager> getallmanagers(){
+        return service.getallmanagers();
+    }
 }
