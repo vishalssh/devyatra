@@ -8,4 +8,5 @@ public interface HotelManagerService {
     List<Hotelmanager> getallmanagers();
     Hotelmanager getManagerById(int id);
     void deleteManagerById(int id);
+    Hotelmanager updateManager(int id,Hotelmanager manager);
 }

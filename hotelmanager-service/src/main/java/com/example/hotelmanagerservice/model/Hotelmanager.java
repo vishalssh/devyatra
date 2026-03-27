@@ -55,6 +55,7 @@ public class Hotelmanager {
         this.managercontactnumber = managercontactnumber;
     }
 
+
     @Override
     public String toString() {
         return "Hotelmanager{" +
@@ -62,7 +63,7 @@ public class Hotelmanager {
                 ", managername='" + managername + '\'' +
                 ", manageremail='" + manageremail + '\'' +
                 ", managerpassword='" + managerpassword + '\'' +
-                ", managercontactnumber='" + managercontactnumber + '\'' +
+                ", managercontactnumber=" + managercontactnumber +
                 '}';
     }
 }
