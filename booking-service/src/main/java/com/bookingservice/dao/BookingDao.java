@@ -14,8 +14,14 @@ public class BookingDao implements BookingService {
     private BookingRepo bookingRepo;
 
     @Override
-    public void createBooking(Booking booking) {
+    public String createBooking(Booking booking) {
         bookingRepo.save(booking);
+        return null;
+    }
+
+    @Override
+    public Booking getBookingById(String bookingId) {
+        return bookingRepo.findById(bookingId).orElse(null);
     }
 
     @Override
@@ -24,25 +30,8 @@ public class BookingDao implements BookingService {
     }
 
     @Override
-    public String getBookingById(String uid) {
-        Booking booking = bookingRepo.findByUid(uid).orElse(null);
-
-        if (booking != null) {
-            return "Booking ID: " + booking.getBid() + "\n" +
-                    "User ID: " + booking.getUid() + "\n" +
-                    "Package ID: " + booking.getPid() + "\n" +
-                    "Vehicle ID: " + booking.getVid() + "\n" +
-                    "No of Persons: " + booking.getPerson() + "\n" +
-                    "Booking Date: " + booking.getBookingDate() + "\n" +
-                    "Start Date: " + booking.getStartDate() + "\n" +
-                    "End Date: " + booking.getEndDate() + "\n" +
-                    "Total Amount: " + booking.getTotalAmount() + "\n" +
-                    "Status: " + booking.getStatus() + "\n" +
-                    "Payment Status: " + booking.getPaymentStatus();
-        } else {
-            return "Booking not found with User ID: " + uid;
-        }
-
+    public List<Booking> getBookingByUserId(String userId) {
+        return bookingRepo.findByUserId(userId);
     }
 
 
