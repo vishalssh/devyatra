@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 public class Booking {
     private String bid;
 
-    private String uid;
+    private String userId;
     private String pid;
     private String vid;
     private int person;
