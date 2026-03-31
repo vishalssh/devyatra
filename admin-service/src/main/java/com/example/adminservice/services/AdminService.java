@@ -5,9 +5,13 @@ import com.example.adminservice.models.Users;
 
 import java.util.List;
 
-public interface adminService {
+public interface AdminService {
 
-   public List<Users> getallusers();
+   public Admin saveAdmin(Admin admin);
 
-   public Users getsingleuser(String userId);
+   public List<Users> getAllUsers();
+
+   public Users getUserById(String userId);
+
+
 }

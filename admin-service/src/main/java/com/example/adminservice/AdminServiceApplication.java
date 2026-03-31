@@ -12,9 +12,4 @@ public class AdminServiceApplication {
         SpringApplication.run(AdminServiceApplication.class, args);
     }
 
-    @Bean
-    public RestTemplate resttem()
-    {
-        return new RestTemplate();
-    }
 }
