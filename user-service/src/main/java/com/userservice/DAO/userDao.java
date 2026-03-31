@@ -40,7 +40,7 @@ public class userDao implements userService {
     }
 
     @Override
-    public Users getUserById(String userId) {
+    public Users getUser(String userId) {
         return ur.findById(userId).orElse(null);
     }
 

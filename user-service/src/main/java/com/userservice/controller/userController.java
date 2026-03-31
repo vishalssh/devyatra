@@ -24,7 +24,7 @@ public class userController {
 
     @GetMapping("/getUser/{userId}")
     public Users getUser(@PathVariable String userId) {
-        return us.getUserById(userId);
+        return us.getUser(userId);
     }
 
     @GetMapping("/getAllUsers")
