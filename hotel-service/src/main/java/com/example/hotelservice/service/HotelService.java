@@ -4,4 +4,6 @@ import com.example.hotelservice.model.Hotel;
 
 public interface HotelService  {
     public Hotel register(Hotel hotel);
+
+    public Hotel getHotelById(int hotelId);
 }
