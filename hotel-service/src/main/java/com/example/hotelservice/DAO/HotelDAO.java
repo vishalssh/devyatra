@@ -16,4 +16,9 @@ public class HotelDAO implements HotelService {
     public Hotel register(Hotel hotel){
         return hotelrepo.save(hotel);
     }
+
+    @Override
+    public Hotel getHotelById(int hotelId) {
+        return hotelrepo.findById(hotelId).orElse(null);
+    }
 }
