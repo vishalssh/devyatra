@@ -13,7 +13,6 @@ public class Hotel {
     private String hotelName;
     private String hotelLocation;
     private String hotelDescription;
-    private double hotelPrice;
     private int managerid;
 
     public int getHotelId() {
@@ -48,13 +47,6 @@ public class Hotel {
         this.hotelDescription = hotelDescription;
     }
 
-    public double getHotelPrice() {
-        return hotelPrice;
-    }
-
-    public void setHotelPrice(double hotelPrice) {
-        this.hotelPrice = hotelPrice;
-    }
 
     public int getManagerid() {
         return managerid;
@@ -71,7 +63,6 @@ public class Hotel {
                 ", hotelName='" + hotelName + '\'' +
                 ", hotelLocation='" + hotelLocation + '\'' +
                 ", hotelDescription='" + hotelDescription + '\'' +
-                ", hotelPrice=" + hotelPrice +
                 ", managerid=" + managerid +
                 '}';
     }
