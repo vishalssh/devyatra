@@ -15,4 +15,6 @@ public interface userService {
     public void deleteUserById(String userId);
 
     public Users getUserBookingById(String userId);
+
+    Users getUserHotelBookingById(String hotelId);
 }
