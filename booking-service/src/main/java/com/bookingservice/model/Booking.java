@@ -1,6 +1,7 @@
 package com.bookingservice.model;
 
 import com.bookingservice.dto.HotelDto;
+import com.bookingservice.dto.RoomDto;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
@@ -37,4 +38,6 @@ public class Booking {
     private LocalDate endDate;
     @Transient
     private List<HotelDto> hotelDetails = new ArrayList<>();
+    @Transient
+    private List<RoomDto> roomDetails = new ArrayList<>();
 }
