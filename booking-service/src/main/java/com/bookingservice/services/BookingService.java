@@ -14,5 +14,4 @@ public interface BookingService {
 
     public List<Booking> getBookingByUserId(String userId);
 
-    public Booking getHotel(String hotelId);
 }
