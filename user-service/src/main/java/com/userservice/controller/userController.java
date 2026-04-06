@@ -32,7 +32,7 @@ public class userController {
         return us.getAllUsers();
     }
 
-    @PostMapping("/deleteUser/{userId}")
+    @PutMapping("/deleteUser/{userId}")
     public String deleteUser(@PathVariable String userId) {
         us.deleteUserById(userId);
         return "User deleted";
