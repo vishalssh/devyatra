@@ -1,6 +1,7 @@
 package com.bookingservice.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
@@ -11,6 +12,7 @@ import lombok.ToString;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 @Getter
@@ -20,11 +22,10 @@ import java.time.LocalDateTime;
 @Table(name = "booking")
 public class Booking {
     @Id
-    private String bid;
+    private String bookingId;
 
-    private String uid;
-    private String pid;
-    private String vid;
+    private String userId;
+    private String vehicleId;
     private int person;
 
     private BigDecimal totalAmount;

@@ -10,7 +10,6 @@ import java.util.List;
 @Data
 public class Users {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String userId;
     private String firstName;
     private String lastName;
