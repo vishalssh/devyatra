@@ -16,9 +16,6 @@ import java.util.List;
 import java.util.UUID;
 
 @Data
-@Getter
-@Setter
-@ToString
 @Entity
 @Table(name = "booking")
 public class Booking {
@@ -26,7 +23,7 @@ public class Booking {
     private String bookingId;
 
     private String userId;
-    private String vehicleId;
+    private String roomId;
     private int person;
 
     private BigDecimal totalAmount;
