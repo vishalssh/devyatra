@@ -1,6 +1,6 @@
 package com.example.hotelmanagerservice.controller;
 
-import com.example.hotelmanagerservice.model.Hotelmanager;
+import com.example.hotelmanagerservice.model.HotelManager;
 import com.example.hotelmanagerservice.service.HotelManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,18 +14,18 @@ public class HotelManagerController {
     HotelManagerService service;
 
     @PostMapping("/save") //only admin can register
-    public Hotelmanager save(@RequestBody Hotelmanager manager){
+    public HotelManager save(@RequestBody HotelManager manager){
         return service.save(manager);
     }
 
 
     @GetMapping("/getallmanagers")  //only admin
-    public List<Hotelmanager> getallmanagers(){
+    public List<HotelManager> getallmanagers(){
         return service.getallmanagers();
     }
 
     @GetMapping("/getsingleId/{id}")    //admin or manager
-    public Hotelmanager getManagerById(@PathVariable int id){
+    public HotelManager getManagerById(@PathVariable int id){
         return service.getManagerById(id);
     }
 
@@ -36,7 +36,7 @@ public class HotelManagerController {
     }
 
     @PutMapping("/updatemanager/{id}")  //only admin
-    public Hotelmanager updateManager(@PathVariable int id,@RequestBody Hotelmanager manager){
+    public HotelManager updateManager(@PathVariable int id,@RequestBody HotelManager manager){
         return service.updateManager(id,manager);
     }
 }

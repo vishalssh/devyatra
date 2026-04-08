@@ -1,12 +1,12 @@
 package com.example.hotelmanagerservice.service;
 
-import com.example.hotelmanagerservice.model.Hotelmanager;
+import com.example.hotelmanagerservice.model.HotelManager;
 import java.util.List;
 
 public interface HotelManagerService {
-    Hotelmanager save(Hotelmanager manager);
-    List<Hotelmanager> getallmanagers();
-    Hotelmanager getManagerById(int id);
+    HotelManager save(HotelManager manager);
+    List<HotelManager> getallmanagers();
+    HotelManager getManagerById(int id);
     void deleteManagerById(int id);
-    Hotelmanager updateManager(int id,Hotelmanager manager);
+    HotelManager updateManager(int id,HotelManager manager);
 }

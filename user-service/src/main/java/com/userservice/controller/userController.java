@@ -43,8 +43,4 @@ public class userController {
         return us.getUserBookingById(userId);
     }
 
-    @GetMapping("/getUserHotelBooking/{hotelId}")
-    public Users getUserHotelBooking(@PathVariable String hotelId) {
-        return us.getUserHotelBookingById(hotelId);
-    }
 }

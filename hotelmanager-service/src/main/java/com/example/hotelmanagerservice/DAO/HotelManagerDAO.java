@@ -1,6 +1,6 @@
 package com.example.hotelmanagerservice.DAO;
 
-import com.example.hotelmanagerservice.model.Hotelmanager;
+import com.example.hotelmanagerservice.model.HotelManager;
 import com.example.hotelmanagerservice.repository.HotelManagerRepo;
 import com.example.hotelmanagerservice.service.HotelManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,23 +11,23 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class HotelmanagerDAO implements HotelManagerService {
+public class HotelManagerDAO implements HotelManagerService {
 
     @Autowired
     HotelManagerRepo managerrepo;
 
     @Override
-    public Hotelmanager save(Hotelmanager manager) {
+    public HotelManager save(HotelManager manager) {
         return managerrepo.save(manager);
     }
 
     @Override
-    public List<Hotelmanager> getallmanagers(){
+    public List<HotelManager> getallmanagers(){
         return managerrepo.findAll();
     }
 
     @Override
-    public Hotelmanager getManagerById(int id){
+    public HotelManager getManagerById(int id){
         return managerrepo.findById(id).orElse(null);
     }
 
@@ -37,14 +37,14 @@ public class HotelmanagerDAO implements HotelManagerService {
     }
 
     @Override
-    public Hotelmanager updateManager(int id ,Hotelmanager manager){
-        Optional<Hotelmanager> existing=managerrepo.findById(id);
+    public HotelManager updateManager(int id ,HotelManager manager){
+        Optional<HotelManager> existing=managerrepo.findById(id);
         if(existing.isPresent()){
-            Hotelmanager m=existing.get();
-            m.setManagername(manager.getManagername());
-            m.setManageremail(manager.getManageremail());
-            m.setManagerpassword(manager.getManagerpassword());
-            m.setManagercontactnumber(manager.getManagercontactnumber());
+            HotelManager m=existing.get();
+            m.setManagerName(manager.getManagerName());
+            m.setManagerEmail(manager.getManagerEmail());
+            m.setManagerPassword(manager.getManagerPassword());
+            m.setManagerContact(manager.getManagerContact());
             return managerrepo.save(m);
         }
         return null;
