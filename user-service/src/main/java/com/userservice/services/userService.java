@@ -16,5 +16,4 @@ public interface userService {
 
     public Users getUserBookingById(String userId);
 
-    Users getUserHotelBookingById(String hotelId);
 }
