@@ -44,4 +44,6 @@ public class HotelController {
         hotel.setHotelId(hotelId);
         return hotelservice.updateHotel(hotel);
     }
+
+    // API - HOTELS
 }

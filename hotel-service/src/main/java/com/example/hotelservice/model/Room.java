@@ -14,7 +14,4 @@ public class Room {
     private boolean available;
     private double price;
     private int hotelId;
-    @Transient
-    private Hotel hotel;
-
 }

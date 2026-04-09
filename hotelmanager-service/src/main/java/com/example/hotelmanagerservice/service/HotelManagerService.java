@@ -1,5 +1,6 @@
 package com.example.hotelmanagerservice.service;
 
+import com.example.hotelmanagerservice.model.Hotel;
 import com.example.hotelmanagerservice.model.HotelManager;
 import java.util.List;
 
@@ -9,4 +10,8 @@ public interface HotelManagerService {
     HotelManager getManagerById(int id);
     void deleteManagerById(int id);
     HotelManager updateManager(int id,HotelManager manager);
+
+    public Hotel getHotel(int id);
+    public List<Hotel> getAllHotels();
+    public Hotel createHotel(Hotel hotel);
 }
