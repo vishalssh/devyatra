@@ -1,9 +1,9 @@
 package com.example.hotelmanagerservice.DAO;
 
 import com.example.hotelmanagerservice.external.HotelClient;
-import com.example.hotelmanagerservice.external.RoomClient;
 import com.example.hotelmanagerservice.model.Hotel;
 import com.example.hotelmanagerservice.model.HotelManager;
+import com.example.hotelmanagerservice.model.Room;
 import com.example.hotelmanagerservice.repository.HotelManagerRepo;
 import com.example.hotelmanagerservice.service.HotelManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +19,7 @@ public class HotelManagerDAO implements HotelManagerService {
     HotelManagerRepo managerrepo;
 
     @Autowired
-    private HotelClient hotelClient;
-
-    @Autowired
-    private RoomClient roomClient;
+    private HotelClient client;
 
     @Override
     public HotelManager save(HotelManager manager) {
@@ -62,16 +59,30 @@ public class HotelManagerDAO implements HotelManagerService {
 
     @Override
     public Hotel getHotel(int id) {
-        return hotelClient.getHotelById(id);
-    }
-
-    @Override
-    public List<Hotel> getAllHotels() {
-        return hotelClient.getAllHotels();
+        return client.getHotelById(id);
     }
 
     @Override
     public Hotel createHotel(Hotel hotel) {
-        return hotelClient.register(hotel);
+        return client.register(hotel);
     }
+
+    // RoomClient Dao ---------
+
+    @Override
+    public Room addRoom(Room room) {
+        return client.addRoom(room);
+    }
+
+    @Override
+    public Room getRoomById(int roomId) {
+        return client.getRoomById(roomId);
+    }
+
+    @Override
+    public List<Room> getAllRooms() {
+        return client.getAllRooms();
+    }
+
+
 }
